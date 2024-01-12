@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500&family=Oswald:wght@300&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #5351d8, #222164) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 530px;
+    padding: 18px;
+    margin: auto;
+    border-radius: 18px;
+    background-color: #5451d6;
+}
+
+.container h1 {
+    color: #161639;
+    text-transform: uppercase;
+    font-size: 28px;
+}
+
+.task-inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.task-inputs input {
+    background-color: transparent;
+    color: #ecf7fb;
+    border: none;
+    border-bottom: 2px solid #e8e8e8d3;
+    margin-right: 12px;
+    font-size: 1rem;
+    transition: all 0.2s ease; 
+}
+
+.task-inputs input::placeholder {
+    color: #1d1d49;
+    font-size: 1rem;
+}
+
+.task-inputs input:focus-visible {
+    outline: none;
+    scale: 1.02;
+}
+
+.task-inputs .submit-button {
+    border: none;
+    min-width: 40px;
+    min-height: 40px;
+    align-self: flex-end;
+    background-color: #1d1d49;
+    border-radius: 100%;
+    font-size: 20px;
+    color: #04041c;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.task-inputs .submit-button:hover {
+    scale: 1.02;
+}
+
+.radios{
+    display: block;
+    text-align: center;
+    margin-left: 5px;
+    color: #1d1d49;
+}
+
+.radios h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.radio-label {
+    margin-right: 2px;
+    font-weight: 600;
+}
+
+.error {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+}

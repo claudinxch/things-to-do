@@ -1,0 +1,92 @@
+.task-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #1d1d46;
+    background-color: #6c6bda;
+    padding: 8px 12px;
+    border-radius: 4px;
+    max-width: inherit;
+}
+
+.task{
+    display: flex;
+}
+
+.done{
+    text-decoration: line-through;
+    color: #444; 
+    font-style: italic;
+}
+
+.task .progress {
+    margin-right: 10px;
+}
+
+.task .task-name {
+    font-size: 1rem;
+    padding: 4px 0px;
+    width: 220px;
+    max-width: 220px;
+}
+
+.task .task-prio {
+    font-size: 1rem;
+    padding: 4px 0px;
+    width: 125px;
+    max-width: 125px;
+    text-transform: capitalize;
+}
+
+.task .task-prio .high {
+    padding: 2px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 300;
+    background-color: #d21818;
+}
+
+.task .task-prio .medium {
+    padding: 2px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 300;
+    background-color: #FFD700;
+}
+
+.task .task-prio .low {
+    padding: 2px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 300;
+    background-color: #1fa61f;
+}
+
+.task-container .task-actions {
+    margin-left: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.task-container .task-actions:hover {
+    animation: shake 0.60s cubic-bezier(.36,.07,.19,.97) both;
+    scale: 1.04;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
+}
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+    
+    30%, 50%, 70% {
+      transform: translate3d(-2px, 0, 0);
+    }
+    40%, 60% {
+      transform: translate3d(2px, 0, 0);
+  }
+}
