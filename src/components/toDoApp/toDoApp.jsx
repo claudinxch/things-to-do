@@ -26,12 +26,14 @@ function ToDoApp() {
     }
   }, [tasks, newTask, priority]);
 
-  const deleteTask = useCallback((index) => {   //Function to delete a task
-    const updatedTasks = [...tasks];
-    updatedTasks.splice(index, 1);
-    setTasks(updatedTasks);
-  }, [tasks]);
-
+  const deleteTask = (name) => { //Function to delete a task
+    const filterTasks = tasks.filter((task) => {
+      return (task.taskName !== name)
+    })
+    setTasks(filterTasks);
+    localStorage.setItem('data', JSON.stringify(filterTasks));
+  }   
+    
   useEffect(() => {   //Loads the stored tasks saved in the localStorage
     const tasksStoraged = localStorage.getItem('data')
     

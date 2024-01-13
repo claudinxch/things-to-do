@@ -6,7 +6,7 @@ const TaskItem = ({ task, deleteATask }) => {   //Receives the props from taskLi
     const [status, setStatus] = useState(false);
     
     const deleteTask = () => {  //Deletes the task receiving the deleteATask from taskList
-      deleteATask(task); 
+      deleteATask(task.taskName); 
     }
   
     return ( 
